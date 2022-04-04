@@ -20,7 +20,8 @@ const app = express();
 // use the express-graphql middleware
 app.use('/graphql', graphqlHTTP({
   schema,
-  rootValue: root
+  rootValue: root,
+  graphiql: true,
 }));
 
 app.listen(3000, () => {
